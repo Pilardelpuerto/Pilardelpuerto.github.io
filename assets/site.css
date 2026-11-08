@@ -3,7 +3,8 @@
 /* Tipografías: se usan las del sistema cuando existen (Mac, iPhone, Windows) y, si no, alternativas libres equivalentes */
 @font-face{font-family:'PdpImpact';src:local('Impact'),local('Impact Regular'),url(/assets/fonts/anton-latin-400-normal.woff2) format('woff2');font-display:swap}
 @font-face{font-family:'PdpArialBlack';src:local('Arial Black'),local('ArialMT-Black'),url(/assets/fonts/arimo-latin-700-normal.woff2) format('woff2');font-weight:100 900;font-display:swap}
-@font-face{font-family:'PdpHelvLight';src:local('Helvetica Light'),local('Helvetica-Light'),local('HelveticaNeue-Light'),local('Helvetica Neue Light'),url(/assets/fonts/arimo-latin-400-normal.woff2) format('woff2');font-display:swap}
+@font-face{font-family:'PdpHelvLight';src:local('Helvetica Light'),local('Helvetica-Light'),local('HelveticaNeue-Light'),local('Helvetica Neue Light'),url(/assets/fonts/arimo-latin-400-normal.woff2) format('woff2');font-weight:100 500;font-display:swap}
+@font-face{font-family:'PdpHelvLight';src:local('Helvetica'),local('HelveticaNeue'),local('Helvetica Neue'),local('Arial'),url(/assets/fonts/arimo-latin-400-normal.woff2) format('woff2');font-weight:600 900;font-display:swap}
 @font-face{font-family:'PdpHelv';src:local('Helvetica'),local('Helvetica Neue'),local('HelveticaNeue'),local('Arial'),url(/assets/fonts/arimo-latin-400-normal.woff2) format('woff2');font-display:swap}
 @font-face{font-family:'PdpHelvBold';src:local('Helvetica Bold'),local('Helvetica-Bold'),local('HelveticaNeue-Bold'),local('Arial Bold'),local('Arial-BoldMT'),url(/assets/fonts/arimo-latin-700-normal.woff2) format('woff2');font-display:swap}
 
