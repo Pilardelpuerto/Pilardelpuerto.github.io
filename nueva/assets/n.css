@@ -44,12 +44,14 @@ ul{list-style:none}
 .tile--type:hover .type{color:var(--ink)}
 /* página de proyecto: dos columnas de imágenes; a la derecha, cuadro blanco fijo con la información y las imágenes pasan por detrás */
 .is-work main,.is-text main{padding-top:96px}
+.is-work main{padding-top:84px}
 .work{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--gap);align-items:start;padding:0 var(--side)}
 .pics{display:flex;flex-direction:column;gap:var(--gap)}
 .pics figure{margin:0}
 .wr{display:grid;align-items:start}
 .wr>.box,.wr>.pics{grid-area:1/1}
-.box{position:sticky;top:96px;z-index:2;align-self:start;background:#fff;padding:0 0 22px}
+.box{position:sticky;top:84px;z-index:2;align-self:start;background:#fff;padding:36px}
+.box>:last-child{margin-bottom:0}
 .pics-r{padding-top:var(--boxh,420px)}
 .exh{margin-top:28px}
 .m-pics{display:none}
@@ -72,13 +74,13 @@ ul.small li{margin-bottom:2px}
 .page li{margin-bottom:5px}
 .foot{display:flex;justify-content:space-between;align-items:center;padding:60px var(--side) 28px;font-size:13px;font-weight:700;color:var(--mute)}
 .soc{display:flex;gap:14px}.soc a{color:var(--mute);transition:color .2s}.soc a:hover{color:var(--ink)}.soc svg{width:15px;height:15px;display:block}
-.blurin{animation:pdpBlurIn 2.9s linear .4s backwards}
+.blurin{animation:pdpBlurIn 1.6s ease-out .2s backwards}
 @keyframes pdpBlurIn{from{filter:blur(6px);opacity:0}12%{opacity:1}to{filter:blur(0);opacity:1}}
 @media (prefers-reduced-motion:reduce){.blurin{animation:none}}
 @media (max-width:900px){
  .work{grid-template-columns:1fr;row-gap:24px}
  .wl,.wr .pics{display:none}
- .wr{display:block}.box{position:static}
+ .wr{display:block}.box{position:static;padding:0}
  .m-pics{display:flex;flex-direction:column;gap:16px}
 }
 @media (max-width:700px){
