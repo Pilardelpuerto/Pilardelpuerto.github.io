@@ -1,4 +1,4 @@
-@font-face{font-family:"Impact-f";src:local("Impact"),url(fonts/anton-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Impact-f";src:local("Impact"),url(fonts/anton-latin-400-normal.woff2) format("woff2");font-display:block}
 @font-face{font-family:"Arial-f";src:local("Arial"),local("Helvetica"),url(fonts/arimo-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Arial-f";src:local("Arial Bold"),local("Helvetica Bold"),url(fonts/arimo-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
 :root{--side:3vw;--gap:3vw;--fs:14px;--ink:#111;--mute:#8a8a8a;--nm:clamp(46px,8.4vw,132px)}
@@ -74,7 +74,8 @@ ul.small li{margin-bottom:2px}
 .page li{margin-bottom:5px}
 .foot{display:flex;justify-content:space-between;align-items:center;padding:60px var(--side) 28px;font-size:13px;font-weight:700;color:var(--mute)}
 .soc{display:flex;gap:14px}.soc a{color:var(--mute);transition:color .2s}.soc a:hover{color:var(--ink)}.soc svg{width:15px;height:15px;display:block}
-.blurin{animation:pdpBlurIn 2.2s ease-in-out .15s backwards}
+.blurin{opacity:0}
+.blurin.go{opacity:1;animation:pdpBlurIn 3s linear backwards}
 @keyframes pdpBlurIn{from{filter:blur(10px);opacity:0}to{filter:blur(0);opacity:1}}
 @media (prefers-reduced-motion:reduce){.blurin{animation:none}}
 @media (max-width:900px){
@@ -107,3 +108,19 @@ ul.small li{margin-bottom:2px}
  .tile--type .cap{display:flex}
  .is-work main,.is-text main{padding-top:70px}
 }
+
+/* galería a pantalla completa */
+.pics figure,.m-pics figure{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:100;background:#fff;display:none;align-items:center;justify-content:center;padding:70px 80px 60px;touch-action:pan-y}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;cursor:pointer;opacity:0;transition:opacity .35s}
+.lb img.ok{opacity:1}
+.lb button{position:absolute;background:none;border:0;cursor:pointer;color:var(--ink);font:700 13px/1 "Arial-f",Arial,sans-serif;padding:10px}
+.lb .x{top:18px;right:calc(var(--side) - 10px);font-size:28px;font-weight:400}
+.lb .pv,.lb .nx{top:50%;transform:translateY(-50%);font-size:26px;font-weight:400;color:var(--mute)}
+.lb .pv{left:calc(var(--side) - 10px)}.lb .nx{right:calc(var(--side) - 10px)}
+.lb .pv:hover,.lb .nx:hover,.lb .x:hover{color:var(--ink)}
+.lb .cnt{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-weight:700;font-size:13px;color:var(--mute)}
+body.lb-open{overflow:hidden}
+@media (max-width:700px){.lb{padding:60px 0}.lb .pv,.lb .nx{display:none}}
+.lb button:focus{outline:none}.lb button:focus-visible{outline:1px solid var(--mute)}
