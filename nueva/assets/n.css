@@ -67,8 +67,11 @@ ul.small li{margin-bottom:2px}
 .page section{margin-top:34px}
 .page h2{font-size:13px;font-weight:700;text-transform:lowercase;margin-bottom:10px}
 .page li{margin-bottom:5px}
-.foot{display:flex;justify-content:space-between;align-items:center;padding:60px var(--side) 26px;font-size:11px}
-.soc{display:flex;gap:12px}.soc svg{width:14px;height:14px;display:block}.soc a:hover{opacity:.55}
+.foot{display:flex;justify-content:space-between;align-items:center;padding:60px var(--side) 28px;font-size:13px;font-weight:700;color:var(--mute)}
+.soc{display:flex;gap:14px}.soc a{color:var(--mute);transition:color .2s}.soc a:hover{color:var(--ink)}.soc svg{width:15px;height:15px;display:block}
+.blurin{animation:pdpBlurIn 2.9s linear .4s backwards}
+@keyframes pdpBlurIn{from{filter:blur(6px);opacity:0}12%{opacity:1}to{filter:blur(0);opacity:1}}
+@media (prefers-reduced-motion:reduce){.blurin{animation:none}}
 @media (max-width:900px){
  .work{grid-template-columns:1fr;row-gap:30px}
  .info{position:static;order:-1}
