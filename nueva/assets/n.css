@@ -71,10 +71,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .wl .pics figure:first-child img{view-transition-name:hero}
 .wr{display:grid;align-items:start}
 .wr>.box,.wr>.pics{grid-area:1/1}
-.box{position:sticky;top:60px;margin:-36px -36px 0;z-index:2;align-self:start;background:#fff;padding:36px}
+.box{position:sticky;top:var(--boxtop,30vh);margin:0 -36px;z-index:2;align-self:start;background:#fff;padding:36px}
 .box.free{position:relative;top:0}
 .box>:last-child{margin-bottom:0}
-.pics-r{padding-top:var(--boxh,420px)}
+.pics-r{padding-top:var(--boxh,0px)}
 .exh{margin-top:28px}
 .m-pics{display:none}
 .ttl{font-family:"Impact-f",Impact,sans-serif;font-weight:400;font-size:clamp(22px,2vw,32px);line-height:1.05;margin-bottom:14px;text-transform:uppercase}
