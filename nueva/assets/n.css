@@ -23,7 +23,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .burger{display:none;outline:0;width:22px;height:14px;position:relative;-webkit-tap-highlight-color:transparent}
 .burger span{position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .2s}
 .burger span:first-child{top:2px}.burger span:last-child{bottom:2px}
-.name{position:fixed;z-index:30;top:calc(var(--nm)*1.05);left:50%;transform:translateX(-50%);white-space:nowrap;font-family:"Impact-f",Impact,sans-serif;font-size:var(--nm);line-height:1;color:#fff;mix-blend-mode:difference;view-transition-name:pdp-name}
+.name{position:fixed;z-index:30;top:calc(var(--nm)*1.05);left:50%;transform:translateX(-50%);white-space:nowrap;font-family:"Impact-f",Impact,sans-serif;font-size:var(--nm);line-height:1;color:var(--ink);view-transition-name:pdp-name}
 .name.name--s{top:21px;font-size:30px;z-index:32}
 .blurin{opacity:0}
 .blurin.go{opacity:1;animation:pdpBlurIn 3s linear backwards}
