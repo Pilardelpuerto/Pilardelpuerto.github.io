@@ -34,3 +34,4 @@ var pv=document.querySelector('.idx-pv');idx.querySelectorAll('a').forEach(funct
 tiles.forEach(function(t){t.addEventListener('click',function(){var im=t.querySelector('img');if(im)im.style.viewTransitionName='hero'})});
 window.addEventListener('pageshow',function(){tiles.forEach(function(t){var im=t.querySelector('img');if(im)im.style.viewTransitionName=''})})})();
 (function(){var res=document.getElementById('res');if(!res)return;var bs=[].slice.call(res.querySelectorAll('.lines button')),items=[].slice.call(res.querySelectorAll('.rows li'));bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.classList.toggle('on',x===b)});var l=b.dataset.l;items.forEach(function(li){var ls=(li.dataset.l||'').split(' ');li.classList.toggle('off',!!l&&ls.indexOf(l)<0)})})})})();
+(function(){document.querySelectorAll('.lang a').forEach(function(a){a.addEventListener('click',function(){try{localStorage.pdpLang=a.hreflang}catch(e){}})})})();
