@@ -23,18 +23,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .burger{display:none;outline:0;width:22px;height:14px;position:relative;-webkit-tap-highlight-color:transparent}
 .burger span{position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .2s}
 .burger span:first-child{top:2px}.burger span:last-child{bottom:2px}
-.name{position:fixed;z-index:30;top:calc(var(--nm)*1.05);left:50%;transform:translateX(-50%);white-space:nowrap;font-family:"Impact-f",Impact,sans-serif;font-size:var(--nm);line-height:1;color:var(--ink);view-transition-name:pdp-name}
+.name{position:fixed;z-index:30;top:calc(var(--nm)*1.4);left:50%;transform:translateX(-50%);white-space:nowrap;font-family:"Impact-f",Impact,sans-serif;font-size:var(--nm);line-height:1;color:var(--ink);view-transition-name:pdp-name}
 .name.name--s{top:21px;font-size:30px;z-index:32}
 .blurin{opacity:0}
 .blurin.go{opacity:1;animation:pdpBlurIn 3s linear backwards}
 .name.blurin{view-transition-name:none}
 @keyframes pdpBlurIn{from{filter:blur(10px);opacity:0}to{filter:blur(0);opacity:1}}
 /* portada */
-.is-home main{padding:calc(var(--nm)*3.3) var(--side) 0}
+.is-home main{padding:calc(var(--nm)*4.1) var(--side) 0}
 .tools{display:flex;justify-content:space-between;gap:20px;margin-bottom:22px}
 .flt,.vw{display:flex;gap:18px;flex-wrap:wrap}
-.tools button{font-weight:700;font-size:13px;color:var(--mute);padding:2px 0;transition:color .2s}
-.tools button:hover,.tools button.on{color:var(--ink)}
+.tools button{font-weight:700;font-size:13px;color:#d2d2d2;padding:2px 0;transition:color .2s}
+.tools button:hover,.tools button.on{color:#9a9a9a}
+.vw button.on{display:none}
 .grid{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--gap);align-items:start;transition:opacity .25s}
 .grid.sw,.idx.sw{opacity:0}
 .col{display:flex;flex-direction:column;gap:var(--gap)}
@@ -142,9 +143,9 @@ ul.small li{margin-bottom:2px}
  body.open .lang a{opacity:.4}body.open .lang a[aria-current]{opacity:1}
  body.open .burger span:first-child{top:6px;transform:rotate(45deg)}
  body.open .burger span:last-child{bottom:6px;transform:rotate(-45deg)}
- .name{top:calc(var(--nm)*1.6)}
+ .name{top:calc(var(--nm)*1.9)}
  .name.name--s{top:16px;left:var(--side);transform:none;font-size:26px}
- .is-home main{padding-top:calc(var(--nm)*3.6)}
+ .is-home main{padding-top:calc(var(--nm)*4.2)}
  .tools{flex-direction:column;gap:10px}.flt{gap:6px 14px}
  .grid{grid-template-columns:1fr}
  .col{gap:28px}.grid .col+.col{margin-top:28px}
